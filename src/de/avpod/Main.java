@@ -35,6 +35,10 @@ public class Main {
                     break;
             }
             outputLocation(state.getCoordinate());
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException ignored) {
+            }
         }
     }
 
