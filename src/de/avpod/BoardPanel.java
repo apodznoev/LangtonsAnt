@@ -63,7 +63,7 @@ public class BoardPanel extends JFrame {
             int width = getWidth();
             int height = getHeight();
             int min = Math.min(width, height);
-            int pixelSize = min / (maxSteps + maxOffset);
+            int pixelSize = Math.max(1,min / (maxSteps + maxOffset));
             int rowsCount = min / pixelSize;
             int columnsCount = min / pixelSize;
             g2d.translate(rowsCount / 2 * pixelSize, columnsCount / 2 * pixelSize);
@@ -86,9 +86,9 @@ public class BoardPanel extends JFrame {
             g2d.translate(row * size, -column * size);
             g2d.setColor(fillColor);
             g2d.fillRect(0, 0, size, size);
-            g2d.setColor(Color.BLACK);
+//            g2d.setColor(Color.BLACK);
             g2d.draw(cell);
-            g2d.drawString("x=" + row + ",y=" + column, 0, 10);
+//            g2d.drawString("x=" + row + ",y=" + column, 0, 10);
             g2d.translate(-row * size, column * size);
         }
 

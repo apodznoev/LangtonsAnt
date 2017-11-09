@@ -36,7 +36,7 @@ public class Main {
             }
             outputLocation(state.getCoordinate());
             try {
-                Thread.sleep(200);
+                Thread.sleep(Math.max(1, stepsCount / 10000));
             } catch (InterruptedException ignored) {
             }
         }
