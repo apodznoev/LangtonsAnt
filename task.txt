@@ -5,3 +5,7 @@ Input: starting X and Y, starting Direction, amount of steps
 Output: current X and Y of the Ant
 Output: X Y\n
 Example: 0 0\n
+
+Example of cmd arguments:
+2 3 d 10
+-2 5 l 1000

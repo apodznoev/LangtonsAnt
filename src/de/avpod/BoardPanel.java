@@ -83,13 +83,13 @@ public class BoardPanel extends JFrame {
 
         private void drawCell(int row, int column, int size, Color fillColor, Graphics2D g2d) {
             Rectangle cell = new Rectangle(0, 0, size, size);
-            g2d.translate(row * size, column * size);
+            g2d.translate(row * size, -column * size);
             g2d.setColor(fillColor);
             g2d.fillRect(0, 0, size, size);
             g2d.setColor(Color.BLACK);
             g2d.draw(cell);
             g2d.drawString("x=" + row + ",y=" + column, 0, 10);
-            g2d.translate(-row * size, -column * size);
+            g2d.translate(-row * size, column * size);
         }
 
 
